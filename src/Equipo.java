@@ -1,24 +1,36 @@
 /**
  * Clase padre, contendra los métodos y atributos comunes
  */
-public class Equipo {
-    /*
-    Los enumeradores son una clase especial de variables que almacenan múltiples valores y permite seleccionar
-    entre uno de los valores. Podríamos decir que es un array de constantes.
-     */
+public abstract class Equipo {
+
+    public abstract String accionEspecial();
+
+    //---------------------------------------------------------------------------//
+    //VARIABLES.
+        /*
+        Los enumeradores son una clase especial de variables que almacenan múltiples valores y permite seleccionar
+        entre uno de los valores. Podríamos decir que es un array de constantes.
+         */
     private enum Rareza {FRECUENTE,INFRECUENTE,RARO,MITICO,LEGENDARIO}
     private Rareza nivel_rareza;
     private int nivel;
 
     private String nombre; // El nombre del equipamiento (MISC)
 
-    Equipo(){}
+    //---------------------------------------------------------------------------//
+    //CONSTRUCTORES
+    Equipo(){
+
+    }
 
     public Equipo(int nivel_rareza, int nivel, String nombre) {
         this.nivel_rareza = asignar_rareza(nivel_rareza);
         this.nivel = nivel;
         this.nombre = nombre;
     }
+
+    //---------------------------------------------------------------------------//
+    //MÉTODOS.
 
     /**
      * Método privado para simplemente asignar una rareza dependiendo del nivel
@@ -65,6 +77,8 @@ public class Equipo {
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
+
+      public abstract String accionEspecial(boolean proyectil);
 
 
 }

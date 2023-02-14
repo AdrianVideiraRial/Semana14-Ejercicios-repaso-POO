@@ -4,7 +4,19 @@ public class Armadura extends Equipo{
 
     private double multiplicador; // Multiplicador defensivo (por si se necesita)
 
-    public Armadura(){}
+    public Armadura(){
+
+    }
+
+    @Override
+    public String accionEspecial(boolean proyectil) {
+        return null;
+    }
+
+    @Override
+    public String accionEspecial() {
+        return null;
+    }
 
     public Armadura(double defensa, double multiplicador) {
         this.defensa = defensa;
@@ -32,4 +44,5 @@ public class Armadura extends Equipo{
     public void setMultiplicador(double multiplicador) {
         this.multiplicador = multiplicador;
     }
+
 }

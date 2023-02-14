@@ -11,8 +11,19 @@ public class Arma extends Equipo{
     //---------------------------------------------------------------------------//
     //CONSTRUCTORES.
 
+    @Override
+    public String accionEspecial() {
+        return null;
+    }
+
     Arma(){
     }
+
+    @Override
+    public String accionEspecial(boolean proyectil) {
+        return null;
+    }
+
 
     public Arma(double damage, double multiplicador, double distancia,double tiempo_para_damage) {
         this.damage = damage;
